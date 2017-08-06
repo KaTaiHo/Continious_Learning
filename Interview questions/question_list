@@ -5,6 +5,8 @@ Programming Questions to go over:
 	8/5/2017
 		Median of Two Sorted Arrays****
 		Contains Duplicate III***
+		4Sum ***
+		4Sum II *** -actually pretty easy but look over it anyways
 
 Questions: 
 
@@ -23,4 +25,4 @@ Questions:
 			-Contains III uses something similar to bucket sort to get O(n) runtime
 				-Like bucket sort but uses the parameter "t" to distinguish which bucket they go into
 			-4 Sum relies on 3 Sum which relies on 2 Sum
-			
+
