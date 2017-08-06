@@ -26,3 +26,12 @@ Questions:
 				-Like bucket sort but uses the parameter "t" to distinguish which bucket they go into
 			-4 Sum relies on 3 Sum which relies on 2 Sum
 
+Future Questions/Algorithms to look over:
+	-Sliding window technique 
+	-Sliding window technique for substrings
+	-Dynamic Programming questions
+
+Goals:
+	-Do Chapters 1 - 4 for Leetcode
+	-Do Questions on LeetCode for certain companies
+
