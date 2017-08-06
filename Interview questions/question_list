@@ -16,3 +16,6 @@ Questions:
 	-Contains Duplicate I *
 	-Contains Duplicate II *
 	-Contains Duplicate III **
+	Reflection:
+		-all 3 sum algorithm questions require knowledge of how to solve the sorted version of the 2 sum question
+		-Contains Duplicate is a set of question that utilizes HashMaps
