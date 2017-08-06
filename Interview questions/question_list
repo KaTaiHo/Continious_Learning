@@ -13,6 +13,7 @@ Questions:
 		-3Sum **
 		-3Sum Smaller **
 		-3Sum Closest **
+		-4Sum ***
 		-Contains Duplicate I *
 		-Contains Duplicate II *
 		-Contains Duplicate III ***
@@ -21,3 +22,5 @@ Questions:
 			-Contains Duplicate is a set of question that utilizes HashMaps
 			-Contains III uses something similar to bucket sort to get O(n) runtime
 				-Like bucket sort but uses the parameter "t" to distinguish which bucket they go into
+			-4 Sum relies on 3 Sum which relies on 2 Sum
+			
