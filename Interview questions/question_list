@@ -2,20 +2,22 @@
 
 Programming Questions to go over:
 
-8/5/2017
-	Median of Two Sorted Arrays****
-
+	8/5/2017
+		Median of Two Sorted Arrays****
+		Contains Duplicate III***
 
 Questions: 
 
-8/5/2017
-	-2Sum	*	   
-	-3Sum **
-	-3Sum Smaller **
-	-3Sum Closest **
-	-Contains Duplicate I *
-	-Contains Duplicate II *
-	-Contains Duplicate III **
-	Reflection:
-		-all 3 sum algorithm questions require knowledge of how to solve the sorted version of the 2 sum question
-		-Contains Duplicate is a set of question that utilizes HashMaps
+	8/5/2017
+		-2Sum	*	   
+		-3Sum **
+		-3Sum Smaller **
+		-3Sum Closest **
+		-Contains Duplicate I *
+		-Contains Duplicate II *
+		-Contains Duplicate III ***
+		Reflection:
+			-all 3 sum algorithm questions require knowledge of how to solve the sorted version of the 2 sum question
+			-Contains Duplicate is a set of question that utilizes HashMaps
+			-Contains III uses something similar to bucket sort to get O(n) runtime
+				-Like bucket sort but uses the parameter "t" to distinguish which bucket they go into
