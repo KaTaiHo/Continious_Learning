@@ -19,6 +19,7 @@ Questions:
 		-Contains Duplicate I *
 		-Contains Duplicate II *
 		-Contains Duplicate III ***
+		-Median of Two Sorted Arrays ****** -very tricky to do getkth value
 		Reflection:
 			-all 3 sum algorithm questions require knowledge of how to solve the sorted version of the 2 sum question
 			-Contains Duplicate is a set of question that utilizes HashMaps
@@ -28,6 +29,10 @@ Questions:
 
 	8/6/2017
 		-Longest Substring Without Repeating Characters***
+		-Add Two Numbers ** -still need to do the reverse version of this question
+		-CTIC question 1.1
+		-CTIC question 1.2
+
 
 Future Questions/Algorithms to look over:
 	-Sliding window technique 
