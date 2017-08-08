@@ -7,6 +7,7 @@ Programming Questions to go over:
 		Contains Duplicate III***
 		4Sum ***
 		4Sum II *** -actually pretty easy but look over it anyways
+		Hamming Distance* << very interesting
 
 Questions: 
 
@@ -33,12 +34,20 @@ Questions:
 		-CTIC question 1.1
 		-CTIC question 1.2
 
+	8/7/2017
+		-Search Insert Position *
+		-Merge Two Binary Trees **
+
 
 Future Questions/Algorithms to look over:
 	-Sliding window technique 
 	-Sliding window technique for substrings
 	-Dynamic Programming questions
 	-Bit Maniuplation questions
+	-Trees and Graphs (recursion and stuff)
+
+New Method of Studying:
+	If I get stuck for 40minutes skip the problem and go to a different problem instead of looking at the solution
 
 Goals:
 	-Do Chapters 1 - 4 for CTIC
