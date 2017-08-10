@@ -41,6 +41,11 @@ Questions:
 	8/8/2017
 		-Reverse LinkedList* 
 			-iterative
+	8/9/2017
+		-Copy Graph with Random pointer***
+		-Battleships in a board**
+		-Convert Sorted List to Binary Search Tree** -redo later it was fun : D
+
 
 
 Future Questions/Algorithms to look over:
@@ -56,4 +61,16 @@ New Method of Studying:
 Goals:
 	-Do Chapters 1 - 4 for CTIC
 	-Do Questions on LeetCode for certain companies
+
+
+LinkedList Tricks:
+	-Runner Technique
+		-Middle of List trick
+			ListNode start = head;
+			ListNode trail = head;
+			while (start != null && trail != endNode) {
+				start = start.next.next;
+				trail = trail.next;
+			}
+			Since the start is going twice as fast the trail node will be in the center of the LinkedList
 
