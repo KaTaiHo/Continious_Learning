@@ -1,5 +1,10 @@
 * = difficulty more * means the harder the question was
 
+Legend:
+	- completed
+	? needs to be worked on still and understood
+
+
 Programming Questions to go over:
 
 	8/5/2017
@@ -62,9 +67,9 @@ Questions:
 	8/12/2017
 		-Find lowest Common Ancestor of a Binary Tree***
 		-Find missing value** xor trick
-		-Find duplicate value in array***
-		-Cycle in LinkedList II Floyd's loop detection algorithm
-
+		? Find duplicate value in array***
+		? Cycle in LinkedList II Floyd's loop detection algorithm
+ 
 
 Future Questions/Algorithms to look over:
 	-Sliding window technique 
