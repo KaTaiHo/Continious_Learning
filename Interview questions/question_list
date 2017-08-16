@@ -69,6 +69,10 @@ Questions:
 		-Find missing value** xor trick
 		? Find duplicate value in array***
 		? Cycle in LinkedList II Floyd's loop detection algorithm
+
+	8/15/2017
+		-Add Two Numbers II*** use stack
+		-strstr() **** is actually a lot trickier than you think and is labeled "easy"
  
 
 Future Questions/Algorithms to look over:
