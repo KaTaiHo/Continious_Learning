@@ -3,6 +3,7 @@
 Legend:
 	- completed
 	? needs to be worked on still and understood
+	r redo
 
 
 Programming Questions to go over:
@@ -83,6 +84,14 @@ Questions:
 		- Sum of Left Leaves **
 		- Binary Tree Paths **
 		? Path Sum II
+
+	8/17/2017
+		r BattleShips in a board **
+		- Set Matrix Zeroes ***
+		- Number of 1 Bits ** special corner case when the value is negative
+
+	8/18/2017
+		- starting CTIC questions
 
  
 
