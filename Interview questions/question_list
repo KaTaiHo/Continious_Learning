@@ -109,8 +109,9 @@ Questions:
 		- Path Sum II **
 
 	8/20/2017
-		- Reverse words in a String
-		- Integer to Egnlish Words
+		- Reverse words in a String****
+		- Integer to Egnlish Words****
+		r Design Tic Tac Toe***** (tricky to get O(1) move time)
 
  
 
