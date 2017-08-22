@@ -111,9 +111,13 @@ Questions:
 	8/20/2017
 		- Reverse words in a String****
 		- Integer to Egnlish Words****
+
+	8/21/2017
 		r Design Tic Tac Toe***** (tricky to get O(1) move time)
 		- Binary Tree ZigZag Level order Traversal *** (Kinda cool and fun)
-
+		- Find Peak Element ***
+		- Product of Array Except Self ***
+		r populating-next right-pointers in each node ******* (Do the second one tomorrow)
  
 
 Future Questions/Algorithms to look over:
