@@ -1,3 +1,5 @@
+import pyperclip
+
 
 def get_str():
 	s = input('Enter your Meme:' )
@@ -8,4 +10,4 @@ def get_str():
 	return ''.join(s)
 
 if __name__ == "__main__":
-	print (get_str())
+	pyperclip.copy(get_str())
