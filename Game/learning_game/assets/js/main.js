@@ -1,5 +1,6 @@
 var game = new Phaser.Game(800, 600, Phaser.Auto)
-
+var score = 0;
+var scoreText;
 var GameState = {
 	preload: function(){
 		game.load.image('sky', 'assets/img/sky.png');
@@ -8,6 +9,9 @@ var GameState = {
 		game.load.spritesheet('dude', 'assets/img/dude.png', 32, 48);
 	},
 	create: function(){
+		
+		scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
 		//  We're going to be using physics, so enable the Arcade Physics system
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -117,6 +121,10 @@ function collectStar (player, star) {
 
     // Removes the star from the screen
     star.kill();
+	
+	//  Add and update the score
+    score += 10;
+    scoreText.text = 'Score: ' + score;
 
 }
 
