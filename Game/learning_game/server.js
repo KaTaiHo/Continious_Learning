@@ -30,6 +30,30 @@ io.on('connection', function(socket){
 		};
 		socket.emit('allplayers', getAllPlayers());
 		socket.broadcast.emit('newplayer', socket.player);
+
+        socket.on('stopMoving', function(data) {
+            io.emit('stopMoving', socket.player);
+        });
+
+		socket.on('moveUp', function(data) {
+			io.emit('moveUp', socket.player);
+        });
+
+        socket.on('moveDown', function(data) {
+            io.emit('moveDown', socket.player);
+        });
+
+        socket.on('moveRight', function(data) {
+            io.emit('moveRight', socket.player);
+        });
+
+        socket.on('moveLeft', function(data) {
+            io.emit('moveLeft', socket.player);
+        });
+
+		socket.on('disconnect', function(){
+			io.emit('remove', socket.player.id);
+		});
 	});
 });
 

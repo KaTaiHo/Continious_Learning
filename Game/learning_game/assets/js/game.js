@@ -2,6 +2,9 @@ var game = new Phaser.Game(800, 600, Phaser.Auto)
 var score = 0;
 var scoreText;
 
+
+var keyup, keydown, keyleft, keyright;
+
 var GameState = {
 	preload: function(){
 		game.load.image('sky', 'assets/img/sky.png');
@@ -60,67 +63,52 @@ var GameState = {
 			
 		}
 		scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-	
+
+		keyup = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+		keydown = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
+		keyleft = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
+		keyright = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+
+        keyup.onDown.add(game.echoMoveUp, this);
+		keydown.onDown.add(game.echoMoveDown, this);
+        keyleft.onDown.add(game.echoMoveLeft, this);
+        keyright.onDown.add(game.echoMoveRight, this);
+
+        keyup.onUp.add(game.echoStopMoving, this);
+        keydown.onUp.add(game.echoStopMoving, this);
+        keyleft.onUp.add(game.echoStopMoving, this);
+        keyright.onUp.add(game.echoStopMoving, this);
+
+		players = game.add.group();
+
 		Client.askNewPlayer();
-		
 	},
 	update: function() {
-//		var hitPlatform = game.physics.arcade.collide(player, platforms);
-//		
-//		cursors = game.input.keyboard.createCursorKeys();
-//		
-//		//  Reset the players velocity (movement)
-//		player.body.velocity.x = 0;
-//
-//		if (cursors.left.isDown)
-//		{
-//			//  Move to the left
-//			player.body.velocity.x = -150;
-//
-//			player.animations.play('left');
-//		}
-//		else if (cursors.right.isDown)
-//		{
-//			//  Move to the right
-//			player.body.velocity.x = 150;
-//
-//			player.animations.play('right');
-//		}
-//		else
-//		{
-//			//  Stand still
-//			player.animations.stop();
-//
-//			player.frame = 4;
-//		}
-//
-//		//  Allow the player to jump if they are touching the ground.
-//		if (cursors.up.isDown && player.body.touching.down && hitPlatform)
-//		{
-//			player.body.velocity.y = -350;
-//		}
-//		
-//		
 		game.physics.arcade.collide(stars, platforms);
-//		game.physics.arcade.overlap(player, stars, collectStar, null, this);
+		game.physics.arcade.collide(players, platforms);
+        game.physics.arcade.overlap(players, stars, collectStar, null, this);
 	}
 }
 
 
 function collectStar (player, star) {
-
     // Removes the star from the screen
     star.kill();
 	
-	    //  Add and update the score
+	//  Add and update the score
     score += 10;
     scoreText.text = 'Score: ' + score;
 
 }
 
+function addPhaserDude () {
+    game.add.sprite(game.world.randomX, game.world.randomY, 'star');
+}
+
 game.addNewPlayer = function(id, x, y) {
 	// The player and its settings
-	player = game.add.sprite(x, y, 'dude');
+	// player = game.add.sprite(x, y, 'dude');
+	var player = players.create(x, y, 'dude');
 
 	//  We need to enable physics on the player
 	game.physics.arcade.enable(player);
@@ -135,6 +123,67 @@ game.addNewPlayer = function(id, x, y) {
 	player.animations.add('right', [5, 6, 7, 8], 10, true);
 	
 	game.playerMap[id] = player;
+};
+
+game.removePlayer = function(id) {
+	ame.playerMap[id].destroy();
+	delete game.playerMap[id];
+};
+
+game.echoMoveUp = function() {
+	Client.socket.emit('moveUp');
+};
+
+game.echoMoveDown = function() {
+    Client.socket.emit('moveDown');
+};
+
+game.echoMoveLeft = function() {
+    Client.socket.emit('moveLeft');
+};
+
+game.echoMoveRight = function() {
+    Client.socket.emit('moveRight');
+};
+
+game.echoStopMoving = function() {
+	Client.socket.emit('stopMoving');
+};
+
+game.stopMoving = function(id) {
+    // var player = game.playerMap[id];
+    // player.body.velocity.x = 0;
+    // player.animations.stop();
+	// player.frame = 4;
+
+}
+
+game.movePlayerLeft = function(id) {
+    var player = game.playerMap[id];
+	player.body.velocity.x = 0;
+    player.body.velocity.x = -150;
+    player.animations.play('left');
+};
+
+game.movePlayerRight = function(id) {
+	var player = game.playerMap[id];
+    player.body.velocity.x = 0;
+    player.body.velocity.x = 150;
+    player.animations.play('right');
+};
+
+game.movePlayerUp = function(id) {
+    var player = game.playerMap[id];
+    // if (player.body.touching.down && player.hitPlatform)
+    // {
+        player.body.velocity.y = -350;
+    // }
+};
+
+game.movePlayerDown = function(id) {
+    var player = game.playerMap[id];
+
+
 };
 
 game.state.add('GameState', GameState);
