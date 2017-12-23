@@ -101,7 +101,7 @@ var GameState = {
 //		}
 //		
 //		
-//		game.physics.arcade.collide(stars, platforms);
+		game.physics.arcade.collide(stars, platforms);
 //		game.physics.arcade.overlap(player, stars, collectStar, null, this);
 	}
 }
