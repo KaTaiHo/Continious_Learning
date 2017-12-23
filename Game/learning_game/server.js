@@ -22,12 +22,14 @@ server.listen(8081,function(){ // Listens to port 8081
 server.lastPlayerID = 0;
 
 io.on('connection', function(socket){
+	console.log("a new player has joined the game!")
 	socket.on('newplayer', function(){
 		socket.player = {
 			id: server.lastPlayerID++,
 			x: randomInt(100, 400),
 			y: randomInt(100, 400)
 		};
+
 		socket.emit('allplayers', getAllPlayers());
 		socket.broadcast.emit('newplayer', socket.player);
 
