@@ -10,6 +10,8 @@ var GameState = {
 		game.load.spritesheet('dude', 'assets/img/dude.png', 32, 48);
 	},
 	create: function(){
+		game.playerMap = {};
+		
 		//  We're going to be using physics, so enable the Arcade Physics system
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 
