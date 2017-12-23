@@ -151,10 +151,10 @@ game.echoStopMoving = function() {
 };
 
 game.stopMoving = function(id) {
-    // var player = game.playerMap[id];
-    // player.body.velocity.x = 0;
-    // player.animations.stop();
-	// player.frame = 4;
+    var player = game.playerMap[id];
+    player.body.velocity.x = 0;
+    player.animations.stop();
+	player.frame = 4;
 
 }
 
