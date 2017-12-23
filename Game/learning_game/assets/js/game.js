@@ -123,6 +123,7 @@ game.addNewPlayer = function(id, x, y) {
 	player.animations.add('right', [5, 6, 7, 8], 10, true);
 	
 	game.playerMap[id] = player;
+	console.log("Adding new player with id: " + id);
 };
 
 game.removePlayer = function(id) {
