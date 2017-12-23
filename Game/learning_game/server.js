@@ -54,6 +54,7 @@ io.on('connection', function(socket){
         });
 
 		socket.on('disconnect', function(){
+			console.log("User with ID: " + socket.player.id + " has disconnected");
 			io.emit('remove', socket.player.id);
 		});
 	});

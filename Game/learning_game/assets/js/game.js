@@ -127,7 +127,7 @@ game.addNewPlayer = function(id, x, y) {
 };
 
 game.removePlayer = function(id) {
-	ame.playerMap[id].destroy();
+	game.playerMap[id].destroy();
 	delete game.playerMap[id];
 };
 
