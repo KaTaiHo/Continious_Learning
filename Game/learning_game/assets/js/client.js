@@ -7,7 +7,7 @@ Client.askNewPlayer = function() {
 }
 
 Client.socket.on('newplayer', function(data){
-	Game.addNewPlayer(data.id, data.x, data.y);
+	game.addNewPlayer(data.id, data.x, data.y);
 });
 
 Client.socket.on('allplayers', function(data){
